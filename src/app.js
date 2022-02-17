@@ -9,6 +9,7 @@ app.use(express.static(__dirname+'/public'))
 app.get('/info',(req,res)=>{
     res.send({PORT:PORT})
 })
-app.get('/env',(req,res)=>{
-    res.send(process.env.PAPAS)
+app.get('/variables',(req,res)=>{
+
+    res.send({variable: process.env.PAPAS})
 })
